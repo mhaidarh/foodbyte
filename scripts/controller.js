@@ -26,6 +26,15 @@ const Controller = {
   },
 
   // ---------------------------------------------------------------------------
+  deleteMenuItemInSelectedCollection: id => {
+    const newData = Model.selectedCollection.data.filter(menuItem => {
+      return menuItem.id !== id
+    })
+    Model.selectedCollection.data = newData
+    View.displaySelectedCollection()
+  },
+
+  // ---------------------------------------------------------------------------
   saveCollection: () => {
     const selectedCollection = Model.selectedCollection
   }

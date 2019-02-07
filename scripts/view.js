@@ -50,6 +50,13 @@ const View = {
           alt="${menuItem.name}"
         />
         <span>${menuItem.name}</span>
+        <button
+          class="button button-red button-delete-menu-item"
+          onclick="Controller.deleteMenuItemInSelectedCollection(${
+            menuItem.id
+          })">
+          DELETE
+        </button>
       `
       $selectedCollection.append(div)
     })
