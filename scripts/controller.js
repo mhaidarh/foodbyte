@@ -8,10 +8,10 @@ const Controller = {
       selectedMenuItem
     )
     View.displayCollectionMenu()
-  }
+  },
 
   // ---------------------------------------------------------------------------
   saveCollection: () => {
-    
+    const collectionMenuList = Model.collectionMenuList
   }
 }

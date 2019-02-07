@@ -24,12 +24,13 @@ const Model = {
   // ---------------------------------------------------------------------------
   collectionMenuList: {
     id: 1,
-    name: 'Week 1 Favorites',
+    name: '',
     nextId: 1,
     data: []
   },
 
   collectionList: {
+    nextId: 3,
     data: [
       {
         id: 1,
