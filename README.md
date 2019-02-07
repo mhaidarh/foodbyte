@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
   <h3>🍱 Foodbyte</h3>
   <a href="https://foodbyte.netlify.com">foodbyte.netlify.com</a>
   <p>Simple application to track your food day to day.</p>
