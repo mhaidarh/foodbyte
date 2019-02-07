@@ -1,7 +1,7 @@
 const Storage = {
   // ---------------------------------------------------------------------------
   menuList: {
-    nextId: 3,
+    nextId: 4,
     data: [
       {
         id: 1,
@@ -12,6 +12,11 @@ const Storage = {
         id: 2,
         name: 'Soto Ayam',
         imageURL: 'assets/soto-ayam.jpg'
+      },
+      {
+        id: 3,
+        name: 'Martabak',
+        imageURL: 'assets/martabak.jpg'
       }
     ]
   },

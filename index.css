@@ -23,8 +23,8 @@ body {
 
 .menu-image {
   object-fit: cover;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   border-radius: 10px;
 }
 

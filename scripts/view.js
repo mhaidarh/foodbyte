@@ -16,7 +16,7 @@ const View = {
       div.setAttribute('class', `menu-item animated faster fadeInUp`)
       div.innerHTML = `
         <button class="button button-green button-add-menu-to-collection"
-        onclick="View.addMenuItemToSelectedCollection(${menuItem.id})">
+        onclick="Controller.addMenuItemToSelectedCollection(${menuItem.id})">
           +
         </button>
         <img
