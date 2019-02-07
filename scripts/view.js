@@ -55,6 +55,11 @@ const View = {
     })
   },
 
+  emptySelectedCollection: () => {
+    document.getElementById('collection-menu-list').innerHTML = ''
+    document.getElementById('input-collection-name').value = ''
+  },
+
   // ---------------------------------------------------------------------------
   displayCollectionList: () => {
     const $collectionList = document.getElementById('collection-list')
@@ -98,9 +103,23 @@ const View = {
 
   // ---------------------------------------------------------------------------
   changeCollectionName: () => {
+    // Get input-collection-name when onkeyup
     Model.selectedCollection.name = document.getElementById(
       'input-collection-name'
     ).value
+  },
+
+  // ---------------------------------------------------------------------------
+  submitSelectedCollection: () => {
+    event.preventDefault()
+
+    // Concat selectedCollection into collectionList.data
+    Model.collectionList.data = Model.collectionList.data.concat(
+      Model.selectedCollection
+    )
+    Model.collectionList.nextId += 1
+    View.displayCollectionList()
+    View.emptySelectedCollection()
   }
 }
 
