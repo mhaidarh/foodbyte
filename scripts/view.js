@@ -1,34 +1,9 @@
-const Storage = {
-  // ---------------------------------------------------------------------------
-  menuList: {
-    nextId: 3,
-    data: [
-      {
-        id: 1,
-        name: 'Nasi Goreng',
-        imageURL: 'assets/nasi-goreng.jpg'
-      },
-      {
-        id: 2,
-        name: 'Soto Ayam',
-        imageURL: 'assets/soto-ayam.jpg'
-      }
-    ]
-  },
-
-  // ---------------------------------------------------------------------------
-  collectionMenuList: {
-    name: 'Week 1 Favorites',
-    nextId: 1,
-    data: []
-  }
-}
-
-const App = {
+const View = {
   // ---------------------------------------------------------------------------
   displayAll: () => {
-    App.displayMenu()
-    App.displaySelectedCollection()
+    View.displayMenu()
+    View.displayCollectionMenu()
+    View.displayCollectionList()
   },
 
   // ---------------------------------------------------------------------------
@@ -41,7 +16,7 @@ const App = {
       div.setAttribute('class', `menu-item animated faster fadeInUp`)
       div.innerHTML = `
         <button class="button button-green button-add-menu-to-collection"
-        onclick="App.addMenuItemToSelectedCollection(${menuItem.id})">
+        onclick="View.addMenuItemToSelectedCollection(${menuItem.id})">
           +
         </button>
         <img
@@ -61,7 +36,7 @@ const App = {
   },
 
   // ---------------------------------------------------------------------------
-  displaySelectedCollection: () => {
+  displayCollectionMenu: () => {
     const $collectionMenuList = document.getElementById('collection-menu-list')
     $collectionMenuList.innerHTML = ''
 
@@ -81,31 +56,31 @@ const App = {
   },
 
   // ---------------------------------------------------------------------------
-  openAddNewMenu: () => {
-    const newMenuName = prompt('Food name?')
-    const newMenuImageURL = prompt('Food image URL?')
+  displayCollectionList: () => {
+    const $collectionList = document.getElementById('collection-list')
+    $collectionList.innerHTML = ''
 
-    if (newMenuName && newMenuImageURL) {
-      const newMenuItem = {
-        name: newMenuName,
-        imageURL: newMenuImageURL
-      }
-      Storage.menuList.data = Storage.menuList.data.concat(newMenuItem)
-      App.displayMenu()
-    }
-  },
+    Storage.collectionList.data.forEach(collectionItem => {
+      // EACH COLLECTION LIST
+      const div = document.createElement('div')
+      div.setAttribute('class', `collection-item animated faster fadeInUp`)
+      div.innerHTML = `
+        <h3>${collectionItem.name}</h3>
+      `
 
-  // ---------------------------------------------------------------------------
-  addMenuItemToSelectedCollection: id => {
-    const selectedMenuItem = Storage.menuList.data.find(menuItem => {
-      return menuItem.id === id
+      // EACH MENU ITEM INSIDE A COLLECTION
+      const ul = document.createElement('ul')
+      collectionItem.data.forEach(menuItem => {
+        ul.innerHTML += `
+          <li>${menuItem.name}</li>
+        `
+      })
+
+      div.append(ul)
+      $collectionList.append(div)
     })
-    Storage.collectionMenuList.data = Storage.collectionMenuList.data.concat(
-      selectedMenuItem
-    )
-    App.displaySelectedCollection()
   }
 }
 
 // -----------------------------------------------------------------------------
-App.displayAll()
+View.displayAll()

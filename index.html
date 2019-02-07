@@ -16,7 +16,7 @@
         <input
           class="button button-blue button-add-menu"
           type="button"
-          onclick="App.openAddNewMenu()"
+          onclick="View.openAddNewMenu()"
           value="Add New Menu"
         />
         <section id="menu-list" class="menu-list">
@@ -44,32 +44,14 @@
           </section>
         </div>
 
-        <div class="collection-list">
-          <div class="collection-item">
-            <h3>Week 1</h3>
-            <ul>
-              <li>Nasi Goreng</li>
-              <li>Soto Ayam</li>
-            </ul>
-          </div>
-          <div class="collection-item">
-            <h3>Week 2</h3>
-            <ul>
-              <li>Nasi Goreng</li>
-              <li>Soto Ayam</li>
-            </ul>
-          </div>
-          <div class="collection-item">
-            <h3>Week 3</h3>
-            <ul>
-              <li>Nasi Goreng</li>
-              <li>Soto Ayam</li>
-            </ul>
-          </div>
+        <div id="collection-list" class="collection-list">
+          <!-- COLLECTION LIST -->
         </div>
       </div>
     </main>
 
-    <script src="index.js"></script>
+    <script src="scripts/model.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/view.js"></script>
   </body>
 </html>
