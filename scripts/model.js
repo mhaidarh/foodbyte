@@ -37,7 +37,7 @@ const Model = {
     data: [
       {
         id: 1,
-        name: 'Week 1 Favorites',
+        name: 'Favorite Meals',
         nextId: 3,
         data: [
           {
@@ -54,13 +54,13 @@ const Model = {
       },
       {
         id: 2,
-        name: 'Week 2 Meals',
+        name: 'Snacks',
         nextId: 2,
         data: [
           {
             id: 1,
-            name: 'Nasi Goreng',
-            imageURL: 'assets/nasi-goreng.jpg'
+            name: 'Martabak',
+            imageURL: 'assets/martabak.jpg'
           }
         ]
       }

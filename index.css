@@ -51,8 +51,8 @@ body {
 }
 
 .collection-item {
-  width: 150px;
-  height: 90px;
+  min-width: 150px;
+  min-height: 100px;
   background: #fff;
   border-radius: 4px;
   margin: 0 10px;

@@ -14,5 +14,10 @@ const Data = {
     if (value) {
       return value
     }
+  },
+
+  // ---------------------------------------------------------------------------
+  remove: key => {
+    window.localStorage.removeItem(key)
   }
 }
