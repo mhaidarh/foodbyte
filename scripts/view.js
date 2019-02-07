@@ -11,7 +11,7 @@ const View = {
     const $menuList = document.getElementById('menu-list')
     $menuList.innerHTML = ''
 
-    Storage.menuList.data.forEach((menuItem, index) => {
+    Model.menuList.data.forEach((menuItem, index) => {
       const div = document.createElement('div')
       div.setAttribute('class', `menu-item animated faster fadeInUp`)
       div.innerHTML = `
@@ -40,7 +40,7 @@ const View = {
     const $collectionMenuList = document.getElementById('collection-menu-list')
     $collectionMenuList.innerHTML = ''
 
-    Storage.collectionMenuList.data.forEach(menuItem => {
+    Model.collectionMenuList.data.forEach(menuItem => {
       const div = document.createElement('div')
       div.setAttribute('class', `menu-item animated faster fadeInUp`)
       div.innerHTML = `
@@ -60,7 +60,7 @@ const View = {
     const $collectionList = document.getElementById('collection-list')
     $collectionList.innerHTML = ''
 
-    Storage.collectionList.data.forEach(collectionItem => {
+    Model.collectionList.data.forEach(collectionItem => {
       // EACH COLLECTION LIST
       const div = document.createElement('div')
       div.setAttribute('class', `collection-item animated faster fadeInUp`)
@@ -91,7 +91,7 @@ const View = {
         name: newMenuName,
         imageURL: newMenuImageURL
       }
-      Storage.menuList.data = Storage.menuList.data.concat(newMenuItem)
+      Model.menuList.data = Model.menuList.data.concat(newMenuItem)
       View.displayMenu()
     }
   }

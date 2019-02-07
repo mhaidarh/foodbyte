@@ -1,12 +1,17 @@
 const Controller = {
   // ---------------------------------------------------------------------------
   addMenuItemToSelectedCollection: id => {
-    const selectedMenuItem = Storage.menuList.data.find(menuItem => {
+    const selectedMenuItem = Model.menuList.data.find(menuItem => {
       return menuItem.id === id
     })
-    Storage.collectionMenuList.data = Storage.collectionMenuList.data.concat(
+    Model.collectionMenuList.data = Model.collectionMenuList.data.concat(
       selectedMenuItem
     )
     View.displayCollectionMenu()
+  }
+
+  // ---------------------------------------------------------------------------
+  saveCollection: () => {
+    
   }
 }
