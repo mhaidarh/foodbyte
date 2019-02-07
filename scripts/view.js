@@ -79,6 +79,21 @@ const View = {
       div.append(ul)
       $collectionList.append(div)
     })
+  },
+
+  // ---------------------------------------------------------------------------
+  openAddNewMenu: () => {
+    const newMenuName = prompt('Food name?')
+    const newMenuImageURL = prompt('Food image URL?')
+
+    if (newMenuName && newMenuImageURL) {
+      const newMenuItem = {
+        name: newMenuName,
+        imageURL: newMenuImageURL
+      }
+      Storage.menuList.data = Storage.menuList.data.concat(newMenuItem)
+      View.displayMenu()
+    }
   }
 }
 
