@@ -4,13 +4,6 @@
   <p>Simple application to track your food day to day.</p>
 </div>
 
-## Built With
-
-- Plain JavaScript
-- Plain HTML
-- Plain CSS
-  - Animate.css
-
 ## Current Screenshot
 
 ![Screenshot](assets/images/screenshot.png)
@@ -21,3 +14,24 @@
 
 - Mockup: https://www.figma.com/file/ElkqD4La6bKYqf6cAICTBc2i/Foodbyte
 - Prototype: https://www.figma.com/proto/ElkqD4La6bKYqf6cAICTBc2i/Foodbyte
+
+## Built With
+
+- Plain JavaScript
+- Plain HTML
+- Plain CSS
+  - Animate.css
+
+## How to Run
+
+Install dependencies:
+
+```sh
+npm install
+```
+
+It will also copy the required dependencies into `vendor` directory automatically:
+
+```sh
+npm run postinstall
+```

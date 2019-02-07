@@ -4,7 +4,8 @@
   "description": "Foodbyte, food menu collection manager",
   "main": "index.js",
   "scripts": {
-    "test": "live-server index.html"
+    "test": "live-server index.html",
+    "postinstall": "cp node_modules/animate.css/animate.min.css vendor/"
   },
   "repository": {
     "type": "git",
