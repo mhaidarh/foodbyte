@@ -106,27 +106,6 @@ const View = {
       Model.menuList.data = Model.menuList.data.concat(newMenuItem)
       View.displayMenu()
     }
-  },
-
-  // ---------------------------------------------------------------------------
-  changeCollectionName: () => {
-    // Get input-collection-name when onkeyup
-    Model.selectedCollection.name = document.getElementById(
-      'input-collection-name'
-    ).value
-  },
-
-  // ---------------------------------------------------------------------------
-  submitSelectedCollection: () => {
-    event.preventDefault()
-
-    // Concat selectedCollection into collectionList.data
-    Model.collectionList.data = Model.collectionList.data.concat(
-      Model.selectedCollection
-    )
-    Model.collectionList.nextId += 1
-    View.displayCollectionList()
-    View.emptySelectedCollection()
   }
 }
 

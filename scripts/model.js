@@ -1,6 +1,6 @@
 const Model = {
   // ---------------------------------------------------------------------------
-  menuList: {
+  menuList: Data.get('menuList') || {
     nextId: 4,
     data: [
       {
@@ -22,7 +22,7 @@ const Model = {
   },
 
   // ---------------------------------------------------------------------------
-  selectedCollection: {
+  selectedCollection: Data.get('selectedCollection') || {
     id: null,
     name: '',
     nextId: 1,
@@ -30,7 +30,7 @@ const Model = {
   },
 
   // ---------------------------------------------------------------------------
-  collectionList: {
+  collectionList: Data.get('collectionList') || {
     nextId: 3,
     data: [
       {

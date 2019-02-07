@@ -28,7 +28,7 @@
         <div class="collection">
           <form
             class="collection-title"
-            onsubmit="View.submitSelectedCollection()"
+            onsubmit="Controller.submitSelectedCollection()"
           >
             <h2>Menu Collection</h2>
             <input
@@ -36,7 +36,7 @@
               class="input-text input-collection-name"
               type="text"
               placeholder="Your collection name"
-              onkeyup="View.changeCollectionName()"
+              onkeyup="Controller.changeCollectionName()"
             />
             <input
               class="button button-blue button-save-collection"
@@ -55,7 +55,7 @@
       </div>
     </main>
 
-    <script async src="scripts/storage.js"></script>
+    <script async src="scripts/data.js"></script>
     <script async src="scripts/model.js"></script>
     <script async src="scripts/controller.js"></script>
     <script async src="scripts/view.js"></script>
