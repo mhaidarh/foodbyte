@@ -1,4 +1,8 @@
 const Controller = {
+  initSelectedCollection: () => {
+    Model.selectedCollection.id = Model.collectionList.nextId
+  },
+
   // ---------------------------------------------------------------------------
   addMenuItemToSelectedCollection: id => {
     const selectedMenuItem = Model.menuList.data.find(menuItem => {
@@ -7,6 +11,7 @@ const Controller = {
     Model.selectedCollection.data = Model.selectedCollection.data.concat(
       selectedMenuItem
     )
+    Model.selectedCollection.nextId += 1
     View.displayCollectionMenu()
   },
 
@@ -15,3 +20,5 @@ const Controller = {
     const selectedCollection = Model.selectedCollection
   }
 }
+
+Controller.initSelectedCollection()

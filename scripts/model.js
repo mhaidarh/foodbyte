@@ -23,7 +23,7 @@ const Model = {
 
   // ---------------------------------------------------------------------------
   selectedCollection: {
-    id: 1,
+    id: null,
     name: '',
     nextId: 1,
     data: []

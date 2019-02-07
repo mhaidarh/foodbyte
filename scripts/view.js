@@ -94,6 +94,13 @@ const View = {
       Model.menuList.data = Model.menuList.data.concat(newMenuItem)
       View.displayMenu()
     }
+  },
+
+  // ---------------------------------------------------------------------------
+  changeCollectionName: () => {
+    Model.selectedCollection.name = document.getElementById(
+      'input-collection-name'
+    ).value
   }
 }
 

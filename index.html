@@ -29,9 +29,11 @@
           <form class="collection-title">
             <h2>Collection Name</h2>
             <input
+              id="input-collection-name"
               class="input-text input-collection-name"
               type="text"
               placeholder="Your collection name"
+              onkeyup="View.changeCollectionName()"
             />
             <input
               class="button button-blue button-save-collection"
