@@ -2,6 +2,10 @@
 
 Simple application to track your food day to day.
 
+## Current Screenshot
+
+![Screenshot](assets/images/screenshot.png)
+
 ## Mockup & Prototype
 
 ![Mockup](assets/images/mockup.png)
