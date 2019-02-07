@@ -1,4 +1,5 @@
 const Controller = {
+  // ---------------------------------------------------------------------------
   initSelectedCollection: () => {
     Model.selectedCollection.id = Model.collectionList.nextId
   },
@@ -12,7 +13,16 @@ const Controller = {
       selectedMenuItem
     )
     Model.selectedCollection.nextId += 1
-    View.displayCollectionMenu()
+    View.displaySelectedCollection()
+  },
+
+  // ---------------------------------------------------------------------------
+  deleteMenuItem: id => {
+    const newData = Model.menuList.data.filter(menuItem => {
+      return menuItem.id !== id
+    })
+    Model.menuList.data = newData
+    View.displayMenu()
   },
 
   // ---------------------------------------------------------------------------

@@ -2,7 +2,7 @@ const View = {
   // ---------------------------------------------------------------------------
   displayAll: () => {
     View.displayMenu()
-    View.displayCollectionMenu()
+    View.displaySelectedCollection()
     View.displayCollectionList()
   },
 
@@ -27,7 +27,7 @@ const View = {
         <span>${menuItem.name}</span>
         <button
           class="button button-red button-delete-menu-item"
-          onclick="deleteMenuItem(${menuItem.id})">
+          onclick="Controller.deleteMenuItem(${menuItem.id})">
           DELETE
         </button>
       `
@@ -36,7 +36,7 @@ const View = {
   },
 
   // ---------------------------------------------------------------------------
-  displayCollectionMenu: () => {
+  displaySelectedCollection: () => {
     const $selectedCollection = document.getElementById('collection-menu-list')
     $selectedCollection.innerHTML = ''
 
