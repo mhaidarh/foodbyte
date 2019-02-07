@@ -1,4 +1,6 @@
 const Model = {
+  initial: true,
+
   // ---------------------------------------------------------------------------
   menuList: Data.get('menuList') || {
     nextId: 4,

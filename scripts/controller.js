@@ -60,6 +60,7 @@ const Controller = {
       Model.selectedCollection
     )
     Model.collectionList.nextId += 1
+    Data.set('collectionList', Model.collectionList)
     View.displayCollectionList()
     View.emptySelectedCollection()
   }
