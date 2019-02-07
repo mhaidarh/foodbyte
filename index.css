@@ -79,6 +79,13 @@ body {
   cursor: pointer;
 }
 
+.button-refresh {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
+
 .button-blue {
   background: #66aaff;
 }

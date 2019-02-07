@@ -1,4 +1,9 @@
 const Controller = {
+  refresh: () => {
+    Data.clear()
+    window.location.reload()
+  },
+
   // ---------------------------------------------------------------------------
   initSelectedCollection: () => {
     Model.selectedCollection.id = Model.collectionList.nextId
