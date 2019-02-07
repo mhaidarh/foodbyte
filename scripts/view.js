@@ -68,7 +68,7 @@ const View = {
     Model.collectionList.data.forEach(collectionItem => {
       // EACH COLLECTION LIST
       const div = document.createElement('div')
-      div.setAttribute('class', `collection-item animated faster fadeInUp`)
+      div.setAttribute('class', `collection-item animated faster zoomIn`)
       div.innerHTML = `
         <h3>${collectionItem.name}</h3>
       `
