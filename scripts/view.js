@@ -37,10 +37,10 @@ const View = {
 
   // ---------------------------------------------------------------------------
   displayCollectionMenu: () => {
-    const $collectionMenuList = document.getElementById('collection-menu-list')
-    $collectionMenuList.innerHTML = ''
+    const $selectedCollection = document.getElementById('collection-menu-list')
+    $selectedCollection.innerHTML = ''
 
-    Model.collectionMenuList.data.forEach(menuItem => {
+    Model.selectedCollection.data.forEach(menuItem => {
       const div = document.createElement('div')
       div.setAttribute('class', `menu-item animated faster fadeInUp`)
       div.innerHTML = `
@@ -51,7 +51,7 @@ const View = {
         />
         <span>${menuItem.name}</span>
       `
-      $collectionMenuList.append(div)
+      $selectedCollection.append(div)
     })
   },
 

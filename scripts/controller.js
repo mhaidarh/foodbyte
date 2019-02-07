@@ -4,7 +4,7 @@ const Controller = {
     const selectedMenuItem = Model.menuList.data.find(menuItem => {
       return menuItem.id === id
     })
-    Model.collectionMenuList.data = Model.collectionMenuList.data.concat(
+    Model.selectedCollection.data = Model.selectedCollection.data.concat(
       selectedMenuItem
     )
     View.displayCollectionMenu()
@@ -12,6 +12,6 @@ const Controller = {
 
   // ---------------------------------------------------------------------------
   saveCollection: () => {
-    const collectionMenuList = Model.collectionMenuList
+    const selectedCollection = Model.selectedCollection
   }
 }
