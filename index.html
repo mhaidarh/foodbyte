@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Foodbyte</title>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Foodbyte</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicons/safari-pinned-tab.svg"
+      color="#ff0000"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" />
     <link rel="stylesheet" href="index.css" />
@@ -19,13 +46,15 @@
 
     <main class="container">
       <div class="container-left">
-        <h1>Foodbyte</h1>
-        <input
-          class="button button-blue button-add-menu"
-          type="button"
-          onclick="View.openAddNewMenu()"
-          value="Add New Menu"
-        />
+        <h1 class="title">🍱 Foodbyte</h1>
+        <nav class="nav-menu">
+          <input
+            class="button button-blue button-add-menu"
+            type="button"
+            onclick="View.openAddNewMenu()"
+            value="Add New Menu"
+          />
+        </nav>
         <section id="menu-list" class="menu-list">
           <!-- MENU LIST -->
         </section>
@@ -37,19 +66,24 @@
             class="collection-title"
             onsubmit="Controller.submitSelectedCollection()"
           >
-            <h2>Menu Collection</h2>
-            <input
-              id="input-collection-name"
-              class="input-text input-collection-name"
-              type="text"
-              placeholder="Your collection name"
-              onkeyup="Controller.changeCollectionName()"
-            />
-            <input
-              class="button button-blue button-save-collection"
-              type="submit"
-              value="Save Collection"
-            />
+            <label class="label" for="collection-name">
+              Collection Name:
+            </label>
+            <div class="input-group">
+              <input
+                id="input-collection-name"
+                class="input-text input-collection-name"
+                name="collection-name"
+                type="text"
+                placeholder="Your collection name"
+                onkeyup="Controller.changeCollectionName()"
+              />
+              <input
+                class="button button-blue button-save-collection"
+                type="submit"
+                value="Save"
+              />
+            </div>
           </form>
           <section id="collection-menu-list" class="collection-menu-list">
             <!-- SELECTED COLLECTION MENU LIST -->

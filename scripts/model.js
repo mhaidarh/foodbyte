@@ -8,17 +8,17 @@ const Model = {
       {
         id: 1,
         name: 'Nasi Goreng',
-        imageURL: 'assets/nasi-goreng.jpg'
+        imageURL: 'assets/photos/nasi-goreng.jpg'
       },
       {
         id: 2,
         name: 'Soto Ayam',
-        imageURL: 'assets/soto-ayam.jpg'
+        imageURL: 'assets/photos/soto-ayam.jpg'
       },
       {
         id: 3,
         name: 'Martabak',
-        imageURL: 'assets/martabak.jpg'
+        imageURL: 'assets/photos/martabak.jpg'
       }
     ]
   },
@@ -43,12 +43,12 @@ const Model = {
           {
             id: 1,
             name: 'Nasi Goreng',
-            imageURL: 'assets/nasi-goreng.jpg'
+            imageURL: 'assets/photos/nasi-goreng.jpg'
           },
           {
             id: 2,
             name: 'Soto Ayam',
-            imageURL: 'assets/soto-ayam.jpg'
+            imageURL: 'assets/photos/soto-ayam.jpg'
           }
         ]
       },
@@ -60,7 +60,7 @@ const Model = {
           {
             id: 1,
             name: 'Martabak',
-            imageURL: 'assets/martabak.jpg'
+            imageURL: 'assets/photos/martabak.jpg'
           }
         ]
       }
