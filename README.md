@@ -1,6 +1,15 @@
-# Foodbyte
+<div style="text-align: center;">
+  <h3>🍱 Foodbyte</h3>
+  <a href="https://foodbyte.netlify.com">foodbyte.netlify.com</a>
+  <p>Simple application to track your food day to day.</p>
+</div>
 
-Simple application to track your food day to day.
+## Built With
+
+- Plain JavaScript
+- Plain HTML
+- Plain CSS
+  - Animate.css
 
 ## Current Screenshot
 
